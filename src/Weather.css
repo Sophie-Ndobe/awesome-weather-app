@@ -1,0 +1,15 @@
+.Weather h2 {
+  font-size: 55px;
+}
+
+.Weather img {
+  width: 75px;
+}
+
+.Weather .units {
+  position: relative;
+  top: 7px;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(87, 84, 84);
+}
