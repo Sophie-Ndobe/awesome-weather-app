@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Search.css";
 import Weather from "./Weather";
 import Cities from "./Cities";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -45,6 +46,7 @@ export default function Search(props) {
         wind={weather.wind}
         description={weather.description}
       />
+      <WeatherForecast />
     </div>
   );
 }
