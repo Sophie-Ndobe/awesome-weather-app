@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import MainDate from "./MainDate";
+import Icons from "./Icons";
 
 export default function Weather(props) {
   return (
@@ -12,15 +13,11 @@ export default function Weather(props) {
         </li>
         <li className="description">{props.description}</li>
       </ul>
-      <div className="row">
+      <div className="row mb-4">
         <div className="col">
           <div className="d-flex">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Weather Condition Icon"
-              className="me-2"
-            />
-            <h2>{props.temperature}</h2>
+            <Icons iconUpdate={props.icon} size={60} />
+            <h2 className="ms-4">{props.temperature}</h2>
             <span className="units">°C</span>
           </div>
         </div>
