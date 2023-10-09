@@ -13,11 +13,11 @@ export default function Weather(props) {
         </li>
         <li className="description">{props.description}</li>
       </ul>
-      <div className="row mb-4">
+      <div className="row mb-1">
         <div className="col">
           <div className="d-flex">
-            <Icons iconUpdate={props.icon} size={60} />
-            <h2 className="ms-4">{props.temperature}</h2>
+           <div className="iconComponent"><Icons iconUpdate={props.icon} size={60} /></div> 
+            <h2>{props.temperature}</h2>
             <span className="units">°C</span>
           </div>
         </div>

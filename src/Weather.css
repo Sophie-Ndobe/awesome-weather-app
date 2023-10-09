@@ -1,5 +1,6 @@
 .Weather h2 {
   font-size: 65px;
+  margin-left: -10px;
 }
 
 .Weather ul {
@@ -20,4 +21,10 @@
   font-size: 25px;
   font-weight: bold;
   color: rgb(87, 84, 84);
+}
+
+.Weather .iconComponent {
+  width: 100px;
+  position: relative;
+  top: 20px;
 }

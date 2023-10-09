@@ -1,3 +1,38 @@
 .WeatherForecast {
   text-align: center;
 }
+
+.WeatherForecast .iconComp1 {
+  height: 60px;
+  position: relative;
+  top: 12px;
+  left: 10px;
+}
+
+.WeatherForecast .iconComp2 {
+  height: 60px;
+
+  position: relative;
+  top: 10px;
+  left: -16px;
+}
+.WeatherForecast .iconComp3 {
+  height: 60px;
+  position: relative;
+  top: 10px;
+  left: -44px;
+}
+
+.WeatherForecast .iconComp4 {
+  height: 60px;
+  position: relative;
+  top: -25px;
+  left: 30px;
+}
+
+.WeatherForecast .iconComp5 {
+  height: 60px;
+  position: relative;
+  top: -25px;
+  left: 13px;
+}

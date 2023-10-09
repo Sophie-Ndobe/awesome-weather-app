@@ -24,7 +24,7 @@ export default function Icons(props) {
     "mist-day": "FOG",
     "mist-night": "FOG",
   };
-  
+
   return (
     <div className="Icon">
       <div className="row">

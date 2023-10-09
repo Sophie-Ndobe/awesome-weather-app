@@ -21,27 +21,40 @@ export default function WeatherForecast(props) {
       <div className="row">
         <div className="col-2">
           <p>{days[day1]}</p>
-          <Icons iconUpdate1={props.icon1} size={30} />
+          <div className="iconComp1">
+            <Icons iconUpdate1={props.icon1} size={30} />
+          </div>
           <p>{props.temp1}°</p>
         </div>
         <div className="col-2">
           <p>{days[day2]}</p>
-          <Icons iconUpdate2={props.icon2} size={30} />
+          <div className="iconComp2">
+            {" "}
+            <Icons iconUpdate2={props.icon2} size={30} />
+          </div>
           <p>{props.temp2}°</p>
         </div>
         <div className="col-2">
           <p>{days[day3]}</p>
-          <Icons iconUpdate3={props.icon3} size={30} />
+          <div className="iconComp3">
+            {" "}
+            <Icons iconUpdate3={props.icon3} size={30} />
+          </div>
           <p>{props.temp3}°</p>
         </div>
         <div className="col-2">
           <p>{days[day4]}</p>
-          <Icons iconUpdate4={props.icon4} size={30} />
+          <div className="iconComp4">
+            <Icons iconUpdate4={props.icon4} size={30} />
+          </div>
           <p>{props.temp4}°</p>
         </div>
         <div className="col-2">
           <p>{days[day5]}</p>
-          <Icons iconUpdate5={props.icon5} size={30} />
+          <div className="iconComp5">
+            {" "}
+            <Icons iconUpdate5={props.icon5} size={30} />
+          </div>
           <p>{props.temp5}°</p>
         </div>
       </div>
