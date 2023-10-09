@@ -8,9 +8,7 @@ export default function Search(props) {
   const [weather, setWeather] = useState(" ");
 
   function displayWeather(response) {
-    console.log(response);
     setWeather({
-      
       city: response.data.city,
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
@@ -22,7 +20,6 @@ export default function Search(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(city);
 
     let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
