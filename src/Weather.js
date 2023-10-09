@@ -1,5 +1,5 @@
 import React from "react";
-import "./Weather.css"
+import "./Weather.css";
 
 export default function Weather() {
   return (
@@ -12,7 +12,10 @@ export default function Weather() {
       <div className="row">
         <div className="col">
           <div className="d-flex">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Weather Condition Icon"
+            />
             <h2>21</h2>
             <span className="units">°C</span>
           </div>
