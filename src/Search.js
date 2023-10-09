@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 import Weather from "./Weather";
+import Cities from "./Cities";
 
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -31,6 +32,7 @@ export default function Search(props) {
   }
   return (
     <div className="Search">
+      <Cities />
       <form onSubmit={handleSubmit}>
         <input type="search" onChange={updateCity} />
         <button className="btn btn-primary  mb-1">Search</button>
