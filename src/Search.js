@@ -5,9 +5,9 @@ import Weather from "./Weather";
 import Cities from "./Cities";
 import WeatherForecast from "./WeatherForecast";
 
-export default function Search(props) {
-  const [city, setCity] = useState(props.defaultCity);
-  const [weather, setWeather] = useState(" ");
+export default function Search({ defaultCity }) {
+  const [city, setCity] = useState(defaultCity);
+  const [weather, setWeather] = useState({ ready: false });
   const [forecast, setForecast] = useState(" ");
 
   function displayWeatherForecast(response) {
@@ -32,6 +32,7 @@ export default function Search(props) {
 
   function displayWeather(response) {
     setWeather({
+      ready: true,
       city: response.data.city,
       temperature: Math.round(response.data.temperature.current),
       humidity: response.data.temperature.humidity,
@@ -43,7 +44,10 @@ export default function Search(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    ApiCall();
+  }
 
+  function ApiCall() {
     let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
@@ -55,6 +59,7 @@ export default function Search(props) {
   function updateCity(event) {
     setCity(event.target.value);
   }
+ if (weather.ready) {
   return (
     <div className="Search">
       <Cities />
@@ -87,8 +92,11 @@ export default function Search(props) {
         icon3={forecast.day3Icon}
         icon4={forecast.day4Icon}
         icon5={forecast.day5Icon}
-        
       />
     </div>
   );
+ } else {
+    ApiCall()
+    return <p>"Loading...</p>
+ }
 }
