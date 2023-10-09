@@ -1,11 +1,19 @@
 .Weather h2 {
-  font-size: 55px;
+  font-size: 65px;
+}
+
+.Weather ul {
+  list-style: none;
+  padding: 0px;
 }
 
 .Weather img {
-  width: 75px;
+  width: 85px;
 }
 
+.Weather .description {
+  text-transform: capitalize;
+}
 .Weather .units {
   position: relative;
   top: 7px;

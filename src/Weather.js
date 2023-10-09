@@ -1,13 +1,13 @@
 import React from "react";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="Weather">
-      <h1>Tokyo</h1>
+      <h1>{props.city}</h1>
       <ul>
         <li>Monday 10:27</li>
-        <li>Clear Skies</li>
+        <li className="description">{props.description}</li>
       </ul>
       <div className="row">
         <div className="col">
@@ -15,15 +15,20 @@ export default function Weather() {
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               alt="Weather Condition Icon"
+              className="me-2"
             />
-            <h2>21</h2>
+            <h2>{props.temperature}</h2>
             <span className="units">°C</span>
           </div>
         </div>
         <div className="col">
           <ul>
-            <li>Precipitation: 62%</li>
-            <li>Wind: 2km/h</li>
+            <li>
+              Humidity: <strong>{props.humidity}</strong>%
+            </li>
+            <li>
+              Wind: <strong>{props.wind}</strong>km/h
+            </li>
           </ul>
         </div>
       </div>

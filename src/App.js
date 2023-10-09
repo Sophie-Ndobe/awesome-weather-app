@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-  
-        <Search />
+        <Search defaultCity="Tokyo" />
       </div>
     </div>
   );
