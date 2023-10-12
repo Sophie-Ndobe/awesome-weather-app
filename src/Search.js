@@ -59,44 +59,44 @@ export default function Search({ defaultCity }) {
   function updateCity(event) {
     setCity(event.target.value);
   }
- if (weather.ready) {
-  return (
-    <div className="Search">
-      <Cities />
-      <form onSubmit={handleSubmit}>
-        <input type="search" onChange={updateCity} />
-        <button className="btn btn-primary  mb-1">Search</button>
-        <button className="btn btn-success ms-1 mb-1">Current</button>
-      </form>
-      <Weather
-        city={weather.city}
-        temperature={weather.temperature}
-        humidity={weather.humidity}
-        wind={weather.wind}
-        description={weather.description}
-        icon={weather.icon}
-      />
-      <WeatherForecast
-        temp1={forecast.day1Temp}
-        temp2={forecast.day2Temp}
-        temp3={forecast.day3Temp}
-        temp4={forecast.day4Temp}
-        temp5={forecast.day5Temp}
-        time1={forecast.day1Time}
-        time2={forecast.day2Time}
-        time3={forecast.day3Time}
-        time4={forecast.day4Time}
-        time5={forecast.day5Time}
-        icon1={forecast.day1Icon}
-        icon2={forecast.day2Icon}
-        icon3={forecast.day3Icon}
-        icon4={forecast.day4Icon}
-        icon5={forecast.day5Icon}
-      />
-    </div>
-  );
- } else {
-    ApiCall()
-    return <p>"Loading...</p>
- }
+  if (weather.ready) {
+    return (
+      <div className="Search">
+        <Cities />
+        <form onSubmit={handleSubmit}>
+          <input type="search" onChange={updateCity} />
+          <button className="btn btn-primary  mb-1">Search</button>
+          <button className="btn btn-success ms-1 mb-1">Current</button>
+        </form>
+        <Weather
+          city={weather.city}
+          temperature={weather.temperature}
+          humidity={weather.humidity}
+          wind={weather.wind}
+          description={weather.description}
+          icon={weather.icon}
+        />
+        <WeatherForecast
+          temp1={forecast.day1Temp}
+          temp2={forecast.day2Temp}
+          temp3={forecast.day3Temp}
+          temp4={forecast.day4Temp}
+          temp5={forecast.day5Temp}
+          time1={forecast.day1Time}
+          time2={forecast.day2Time}
+          time3={forecast.day3Time}
+          time4={forecast.day4Time}
+          time5={forecast.day5Time}
+          icon1={forecast.day1Icon}
+          icon2={forecast.day2Icon}
+          icon3={forecast.day3Icon}
+          icon4={forecast.day4Icon}
+          icon5={forecast.day5Icon}
+        />
+      </div>
+    );
+  } else {
+    ApiCall();
+    return <p>"Loading...</p>;
+  }
 }
